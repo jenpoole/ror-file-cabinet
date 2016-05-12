@@ -1,0 +1,5 @@
+// loop through each document and display its title (link) and contents preview
+- @docs.each do |doc|
+    %h2= link_to doc.title, doc
+    %p= time_ago_in_words(doc.created_at)
+    %p= truncate(doc.content, length:50)

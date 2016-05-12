@@ -1,7 +1,12 @@
 class DocsController < ApplicationController
+    before_action :find_doc, only: [:show, :edit, :update, :destroy]
+    
+    # display all documents by newest created
     def index
+        @docs = Doc.all.order("created_at DESC")
     end
     
+    # find document by its id and display its title & contents
     def show
     end
     
@@ -35,6 +40,7 @@ class DocsController < ApplicationController
     private
     
         def find_doc
+            @doc = Doc.find(params[:id])
         end
         
         def doc_params
