@@ -28,13 +28,25 @@ class DocsController < ApplicationController
         @doc = Doc.new
     end
     
+    # update an existing document
     def update
+        # if document is sucessfully updated, redirect to the document
+        if @doc.update(doc_params)
+            redirect_to @doc
+        # if document is not updated, render form again to edit document
+        else
+            render 'edit'
+        end    
     end
     
+    # find document by its id and edit its contents
     def edit
     end
  
+    # find document by its id and delete it, then redirect to all documents index
     def destroy
+        @doc.destroy
+        redirect_to docs_path
     end
     
     private
