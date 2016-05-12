@@ -12,7 +12,7 @@ class DocsController < ApplicationController
     
     # create new document with its parameters title & content
     def create
-        @doc = Doc.new(doc_params)
+        @doc = current_user.docs.build(doc_params)
         
         # if document is sucessfully saved, redirect to the new document
         if @doc.save
@@ -25,7 +25,7 @@ class DocsController < ApplicationController
     
     # new document view
     def new
-        @doc = Doc.new
+        @doc = current_user.docs.build
     end
     
     # update an existing document
