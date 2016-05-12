@@ -3,7 +3,7 @@ class DocsController < ApplicationController
     
     # display all documents by newest created
     def index
-        @docs = Doc.all.order("created_at DESC")
+        @docs = Doc.where(user_id: current_user).order("created_at DESC")
     end
     
     # find document by its id and display its title & contents
