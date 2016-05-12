@@ -1,8 +1,9 @@
 // loop through each document and display its title (link) and contents preview
 - @docs.each do |doc|
-    %h2= link_to doc.title, doc
-    %p= time_ago_in_words(doc.created_at)
-    %p= truncate(doc.content, length:50)
+    .well
+        %h2= link_to doc.title, doc
+        %p= time_ago_in_words(doc.created_at)
+        %p= truncate(doc.content, length:50)
     
 // link to create new document    
-= link_to "Create New", new_doc_path
+%button.btn.btn-sm.btn-info= link_to "Create New", new_doc_path
