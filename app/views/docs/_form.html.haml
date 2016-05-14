@@ -1,5 +1,6 @@
 // form partial for document instance variable (@doc)
-= simple_form_for(@doc, html: { class: 'form-horizontal' }) do |f|
-    = f.input :title
-    = f.input :content
-    = f.button :submit
+.container
+    = simple_form_for(@doc, html: { class: 'form-horizontal' }) do |f|
+        = f.input :title
+        = f.input :content
+        = f.button :submit, class: "btn btn-success create-edit-form-btn"

@@ -31,3 +31,16 @@ a:hover {
     color: #111;
     text-decoration: none;
 }
+
+.form-horizontal .form-group {
+    margin-right: 0;
+}
+
+.create-edit-form-btn {
+    margin-left: -15px;
+}
+
+.form-actions.log-in-btn,
+.form-actions.sign-up-btn {
+    margin-bottom: 20px;
+}
