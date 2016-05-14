@@ -1,9 +1,14 @@
-// loop through each document and display its title (link) and contents preview
-- @docs.each do |doc|
-    .well
-        %h2= link_to doc.title, doc
-        %p= time_ago_in_words(doc.created_at)
-        %p= truncate(doc.content, length:50)
-    
-// link to create new document    
-%p= link_to "Create New", new_doc_path, class: "btn btn-sm btn-success"
+// If a user has created documents, display the documents. Otherwise, show link to create new document.
+-unless @docs.blank?
+    // loop through each document and display its title (link) and contents preview
+    - @docs.each do |doc|
+        %a.well-docs{ href: (url_for [doc]) }
+            .well
+                %h2= doc.title
+                %p= "Created " + time_ago_in_words(doc.created_at) + " ago"
+                %p= truncate(doc.content, length:100)
+- else
+    %h2 Create your first document
+    %p Edit, organize and save your work!
+    // link to create new document    
+    %p= link_to "Create New", new_doc_path, class: "btn btn-sm btn-success"
