@@ -1,6 +1,6 @@
-%h1 New Document!
+%h1 New Document
 // render form partial
 = render 'form'
 
 // leave new form and return to all documents index
-= link_to "Cancel", docs_path
+%p= link_to "Cancel", docs_path, class: "btn btn-primary margin-top"

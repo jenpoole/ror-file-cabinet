@@ -3,6 +3,6 @@
 %p= @doc.content
 
 // links to view all docs, edit doc, or delete doc (with confirmation alert)
-= link_to "All Documents", docs_path
-= link_to "Edit Document", edit_doc_path(@doc)
-= link_to "Delete Document", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }
+%p= link_to "All Documents", docs_path, class: "btn btn-sm btn-primary"
+%p= link_to "Edit Document", edit_doc_path(@doc), class: "btn btn-sm btn-primary"
+%p= link_to "Delete Document", doc_path(@doc), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger"

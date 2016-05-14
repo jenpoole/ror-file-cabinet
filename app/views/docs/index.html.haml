@@ -6,4 +6,4 @@
         %p= truncate(doc.content, length:50)
     
 // link to create new document    
-%button.btn.btn-sm.btn-info= link_to "Create New", new_doc_path
+%p= link_to "Create New", new_doc_path, class: "btn btn-sm btn-success"

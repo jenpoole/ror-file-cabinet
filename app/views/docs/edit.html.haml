@@ -1,6 +1,6 @@
-%h1 Edit Document!
+%h1 Edit Document
 // render form partial
 = render 'form'
 
 // leave edit form and return to document
-= link_to "Cancel", doc_path
+%p= link_to "Cancel", doc_path, class: "btn btn-primary margin-top"
