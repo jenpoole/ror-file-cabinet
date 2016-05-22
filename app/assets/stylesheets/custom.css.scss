@@ -22,8 +22,8 @@ body {
     height: 65vh;
     // color: #fff;
     text-align: right;
-    padding-right: 270px !important;
-    padding-top: 120px;
+    padding-right: 20% !important;
+    padding-top: 10%;
 }
 
 a,
@@ -47,4 +47,24 @@ a:hover {
 
 textarea.form-control {
     height: 250px;
+}
+
+@media screen and (max-width: 995px) {
+    .jumbotron {
+        padding-right: 15% !important;
+        // padding-top: ;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .jumbotron {
+        // padding-right: 15% !important;
+        padding-top: 20% ;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .jumbotron span {
+        display: block;
+    }
 }
