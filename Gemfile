@@ -29,6 +29,12 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 # fontawesome
 gem 'fontawesome-rails-cdn'
+# WYSIWYG Editor
+gem 'ckeditor'
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'responders'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
